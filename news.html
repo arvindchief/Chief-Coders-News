@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            margin-bottom: 15px; /* Add spacing between cards */
+        }
+        .row{
+            margin: 0;
+        }
+        .card:hover {
+            transform: scale(1.03);
+        }
+        .card-img-top {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;  
+        }
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .card-text {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .footer {
+            background-color: #343a40;
+            padding: 20px;
+            color: white;
+        }
+        .footer p{
+            margin: 0 auto;
+                    }
+        .btn-primary{
+            background: #ffcc00;
+            color: #000;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Chief Coders NewsHub</a>
+            <button class="navbar-toggler" type="button" data-bs -toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stats.html">Stats</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+        
+        <!-- News Cards -->
+        <div class="row p-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="s5.png" class="card-img-top" alt="French News">
+                    <div class="card-body">
+                        <h5 class="card-title">French News</h5>
+                        <p class="card-text">Details about the latest drug-related news in France.</p>
+                        <a href="https://www.reuters.com/world/europe/french-cocaine-seizures-more-than-double-2024-new-campaign-targets-users-2025-02-06" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="s6.png" class="card-img-top" alt="Israel News">
+                    <div class="card-body">
+                        <h5 class="card-title">Israel News</h5>
+                        <p class="card-text">Insights into the rising drug addiction issues in Israel.</p>
+                        <a href="https://www.lemonde.fr/en/international/article/2024/08/26/how-drug-addiction-is-on-the-rise-in-israel_6721836_4.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="s7.png" class="card-img-top" alt="England News">
+                    <div class="card-body">
+                        <h5 class="card-title">England News</h5>
+                        <p class="card-text">The struggles of ketamine addiction in England.</p>
+                        <a href="https://www.theguardian.com/society/2024/nov/05/the-agony-of-ketamine-addiction-i-felt-like-i-was-peeing-glass" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="s4.png" class="card-img-top" alt="Youth News">
+                    <div class="card-body">
+                        <h5 class="card-title">Youth News</h5>
+                        <p class="card-text">A report on drug use among adolescents.</p>
+                        <a href="https://nida.nih.gov/news-events/news-releases/2023/12/reported-drug-use-among-adolescents-continued-to-hold-below-pre-pandemic-levels-in-2023" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+ <div class="card">
+                    <img src="s3.png" class="card-img-top" alt="Chennai News">
+                    <div class="card-body">
+                        <h5 class="card-title">Chennai News</h5>
+                        <p class="card-text">Details on a significant drug bust in Chennai.</p>
+                        <a href="https://timesofindia.indiatimes.com/city/chennai/drug-bust-in-chennai-17kg-of-meth-worth-rs-22-crore-seized/cook-among-10-arrested/articleshow/116843627.cms" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="s1.png" class="card-img-top" alt="Sri-lanka News">
+                    <div class="card-body">
+                        <h5 class="card-title">Sri-lanka News</h5>
+                        <p class="card-text">Recent drug seizures bound for Sri Lanka.</p>
+                        <a href="https://www.ndtv.com/chennai-news/drugs-worth-rs-27-crore-bound-for-sri-lanka-seized-in-chennai-6900700" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="s2.png" class="card-img-top" alt="Assam News">
+                    <div class="card-body">
+                        <h5 class="card-title">Assam News</h5>
+                        <p class="card-text">A report on a drug cartel busted in Assam.</p>
+                        <a href="https://www.ndtv.com/india-news/heroin-worth-rs-6-crore-seized-in-assam-inter-state-drug-cartel-busted-6829964" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <p>&copy; 2025 NewsHub. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

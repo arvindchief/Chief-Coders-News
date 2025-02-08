@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Statistics Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+        .navbar {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .chart-container {
+            width: 40%;
+            margin: 30px auto;
+        }
+        table tr td{
+            min-width: 200px;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+        .col-grey {
+            color: grey;
+            font-size: 11px;
+        }
+        h3{
+            margin-top: 3vh;
+            color: royalblue;
+        }
+        .table-container{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stats-head{
+            margin-top: 10vh;
+        }
+        .footer {
+            background-color: #343a40;
+            padding: 20px;
+            display: flex;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        .footer p {
+            margin: 0 auto;
+            color: #fff;
+        }
+        @media screen and (max-width: 600px){
+            .chart-container {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="Home.html">Chief Coders NewsHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stats.html">Stats</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1 class="stats-head">Drug Statistics Dashboard</h1>
+
+    <h3>Number of treatments provided, by drug class in <strong>INDIA : </strong>
+    </h3>
+<div class="table-container">
+    <table>
+        <tr>
+            <td>2022</td>
+            <td >67,077</td>
+        </tr>
+        <tr>
+            <td class="col-grey">Year</td>
+            <td class="col-grey">Total numbers of treatments provided</td>
+        </tr>
+    </table>
+</div>
+    
+    <div class="chart-container">
+        <canvas id="treatmentChart"></canvas>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <p>&copy; 2025 NewsHub. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+        const drugUseData = {
+            labels: ["2017", "2018", "2019", "2022"],
+            datasets: [{
+                label: "Drug Use Prevalence (%)",
+                data: [15, 18, 20, 22],
+                backgroundColor: "rgba(75, 192, 192, 0.6)"
+            }]
+        };
+
+        const treatmentData = {
+            labels: ["Amphetamines", "Cannabis", "Opiods", "Other Drugs", "Cocaine","Solvents"],
+            datasets: [{
+                label: "Number of Treatments",
+                data: [27490, 25993, 8458, 3140, 1582, 414],
+                backgroundColor: ["red", "green", "blue", "purple", "royalblue", "orange"]
+            }]
+        };
+
+        new Chart(document.getElementById("drugUseChart"), {
+            type: "bar",
+            data: drugUseData
+        });
+
+        new Chart(document.getElementById("treatmentChart"), {
+            type: "pie",
+            data: treatmentData
+        });
+    </script>
+</body>
+</html>
